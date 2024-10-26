@@ -1,0 +1,152 @@
+/* Color Palette and Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+:root {
+  --background-gradient: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  --primary-color: #ff9a9e;         /* Light pink for primary elements */
+  --secondary-color: #fad0c4;       /* Light pink for secondary elements */
+  --button-color: #fcb69f;          /* Soft peach for button */
+  --button-hover-color: #f7a8a8;    /* Hover color for button */
+  --text-color: #3d3d3d;            /* Dark gray for text */
+  --border-color: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--background-gradient);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Container */
+.app {
+  width: 100%;
+  max-width: 800px;
+  padding: 40px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 16px var(--shadow-color);
+  border-radius: 12px;
+}
+
+/* Header */
+header h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+header h2 {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+
+/* Upload Section */
+.upload-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.upload-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+/* Styled Upload Button */
+#fileInput {
+  padding: 12px 24px;
+  margin-left: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: var(--button-color);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#fileInput:hover {
+  background-color: var(--button-hover-color);
+  transform: scale(1.05);
+}
+
+#fileInput:active {
+  transform: scale(0.98);
+}
+
+/* Result Display */
+.result-section {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.result-display {
+  border: 1px solid var(--border-color);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  color: var(--text-color);
+  font-size: 1rem;
+  box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+/* Button Styling for Download or Retry */
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: var(--button-color);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--button-hover-color);
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .app {
+    padding: 20px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header h2 {
+    font-size: 1.2rem;
+  }
+
+  .upload-label, #fileInput, button {
+    font-size: 0.9rem;
+  }
+}
